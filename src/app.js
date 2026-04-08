@@ -12,3 +12,12 @@ version: "1.0.0",
 message: "Sistema Ary funcionando correctamente"
 }; 
 }
+
+export function sumar(a ,b){
+
+return  a+b ;
+}
+
+export function restar(q,w){
+return q-w;
+}
