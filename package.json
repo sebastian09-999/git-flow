@@ -1,0 +1,10 @@
+{
+"name": "flowAry",
+"version": "1.0.0",
+"type": "module",
+"description": "Primera aplicacion ary Flow",
+"scripts": {
+"start": "node src/app.js",
+"test": "node test/app.test.js"
+}
+}
