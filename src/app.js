@@ -23,5 +23,10 @@ return q-w;
 }
 
 export function healthcheck(){
-   return null;
+   return {
+status: "ok",
+timestamp: new Date().toISOString(),
+servicio: "StreamFlow API",
+version: "1.0.0"
+   }; 
 }
