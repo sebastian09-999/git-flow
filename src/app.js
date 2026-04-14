@@ -21,3 +21,12 @@ return  a+b ;
 export function restar(q,w){
 return q-w;
 }
+
+export function healthcheck(){
+   return {
+status: "ok",
+timestamp: new Date().toISOString(),
+servicio: "StreamFlow API",
+version: "1.0.0"
+   }; 
+}
