@@ -1,4 +1,4 @@
-import {saludar, despedir, estadoSistema} from "../src/app.js"
+import {saludar, despedir, estadoSistema,healthcheck} from "../src/app.js"
 function ejecutarPruebas(){
 let pasadas=0;
 let fallidas=0;
@@ -14,11 +14,21 @@ fallidas++;
 const actualEstado= estadoSistema();
 if (actualEstado.estado === "activo"){
 console.log ("Test 2 Pasado: estadoSistema() funciona en Ary ");
-pasasdas++;
+pasadas++;
 }else{
 console.log("Test 2 Fallido: ", estado, "en Ary");
 fallidas++;
 }
+
+const health = healthcheck();
+if (health.status==="ok"){
+    console.log("Test healthCheck pasado");
+    pasadas++;
+}else{
+    console.log("Test HealthCheck fallido", health);
+    fallidas++;
+}
+
 console.log ("\nResultados: " + pasadas + "pasadas, " + fallidas + "fallidas");
 if (fallidas>0) process.exit(1);
 }
