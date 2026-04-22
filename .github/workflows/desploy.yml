@@ -26,6 +26,6 @@ jobs:
 
       - name: Desplegar aplicación
         run: |
-          echo "Iniciando despliegue de aplicación ary v$(node -p \"require('./package.json').version\")"
+          echo "Iniciando despliegue de aplicación ary v$(node -p "require('./package.json').version")"
           echo "Sistema desplegado correctamente"
           echo "url: https://streamflow.example.com"
