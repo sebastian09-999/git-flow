@@ -5,6 +5,7 @@
 "description": "Primera aplicacion ary Flow",
 "scripts": {
 "start": "node src/app.js",
-"test": "node test/app.test.js"
+"test": "node test/app.test.js",
+"build": "echo 'Paso omitir para producción'"
 }
 }
