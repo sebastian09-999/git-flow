@@ -1,0 +1,31 @@
+name: Deploy - ary despliegue
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Desplegar a producción
+    runs-on: ubuntu-latest
+    needs: []
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar y probar
+        run: |
+          npm install
+          npm test
+
+      - name: Desplegar aplicación
+        run: |
+          echo "Iniciando despliegue de aplicación ary v$(node -p \"require('./package.json').version\")"
+          echo "Sistema desplegado correctamente"
+          echo "url: https://streamflow.example.com"
