@@ -1,1 +1,1 @@
-{"name":"flowAry","version":"1.0.1","type":"module","description":"Primera aplicacion ary Flow","scripts":{"start":"node src/app.js","test":"node test/app.test.js","build":"echo 'Paso omitir para producción'"}}
+{"name":"flowAry","version":"1.0.2","type":"module","description":"Primera aplicacion ary Flow","scripts":{"start":"node src/app.js","test":"node test/app.test.js","build":"echo 'Paso omitir para producción'"}}
